@@ -2,9 +2,13 @@
 spring:
   application:
     name: demoService
+
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
 server:
   port: 1111

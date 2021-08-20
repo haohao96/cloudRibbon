@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.client.ServiceInstance;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
 
-    private final Logger logger=Logger.getLogger(getClass());
+//    private final Logger logger=Logger.getLogger(getClass());
 
     @Qualifier("eurekaRegistration")
     @Autowired
@@ -23,12 +23,12 @@ public class MyController {
     @Autowired
     private DiscoveryClient client;
 
-    @RequestMapping(value = "/hello",method = RequestMethod.GET)
-    public String hello()
-    {
-        ServiceInstance instance=client.getLocalServiceInstance();
-        logger.info("/hello,host:"+instance.getHost()+",service id:"+instance.getServiceId());
-//        ServiceInstance instance=client.getInstances()
-        return "hello,SpringCloud!";
-    }
+//    @RequestMapping(value = "/hello",method = RequestMethod.GET)
+//    public String hello()
+//    {
+//        ServiceInstance instance=client.get();
+//        logger.info("/hello,host:"+instance.getHost()+",service id:"+instance.getServiceId());
+////        ServiceInstance instance=client.getInstances()
+//        return "hello,SpringCloud!";
+//    }
 }
