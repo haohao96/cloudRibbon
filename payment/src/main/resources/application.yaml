@@ -1,0 +1,13 @@
+server:
+  port: 2222
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: paymentService
