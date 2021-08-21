@@ -16,6 +16,7 @@
     <modules>
         <module>demo</module>
         <module>eureka_server</module>
+        <module>payment</module>
     </modules>
     <description>Demo SpringCloud project for Spring Boot</description>
     <properties>
