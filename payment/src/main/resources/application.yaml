@@ -11,3 +11,19 @@ eureka:
 spring:
   application:
     name: paymentService
+
+
+  datasource:
+    druid: #前缀写成这样就好了 spring.datasource.druid这样自动提示可以用，username等属性也可以用，
+      #然后在ConfigurationProperties注解中把prefix改为spring.datasource.druid即可。
+      username: root
+      password: piyihao
+      url: jdbc:mysql://localhost:3306/payment?serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      initial-size: 23
+      max-active: 23
+      #      filter:
+      #        stat:
+      #          merge-sql: true  不要这个属性 监控页面也会显示sql监控
+      filters: stat,wall #这个配置是真正有效使得监控页面显示sql监控的
