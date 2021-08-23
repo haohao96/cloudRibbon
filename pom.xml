@@ -8,6 +8,7 @@
         <version>2.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.pyh</groupId>
     <artifactId>cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -16,7 +17,10 @@
     <modules>
         <module>demo</module>
         <module>eureka_server</module>
+        <module>eureka_server2</module>
         <module>payment</module>
+        <module>purchase</module>
+        <module>comutils</module>
     </modules>
     <description>Demo SpringCloud project for Spring Boot</description>
     <properties>

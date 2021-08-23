@@ -1,6 +1,6 @@
 package com.pyh.payment.mapper;
 
-import com.pyh.payment.pojo.Payment;
+import com.pyh.comutils.pojo.Payment;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface PayMapper {
 
     @Insert("insert into paymentservice values(#{id},#{serial});")
-    @Options(useGeneratedKeys = true)
+    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     public int create(Payment payment);
 
     @Select("select * from paymentservice where id = #{id};")

@@ -1,4 +1,4 @@
-package com.pyh.payment.json;
+package com.pyh.comutils.json;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ public class ComResult<T> {
     private String message;
     private T data;
 
-    public ComResult(Integer code,String message)
+    public ComResult(Integer code, String message)
     {
         this(code,message,null);
     }

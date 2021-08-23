@@ -1,0 +1,15 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: purchaseService
+  devtools:
+    restart:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+    fetch-registry: true
+    register-with-eureka: true

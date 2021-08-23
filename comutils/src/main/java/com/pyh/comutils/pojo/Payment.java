@@ -1,4 +1,4 @@
-package com.pyh.payment.pojo;
+package com.pyh.comutils.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
