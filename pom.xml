@@ -19,6 +19,7 @@
         <module>eureka_server</module>
         <module>eureka_server2</module>
         <module>payment</module>
+        <module>payment2</module>
         <module>purchase</module>
         <module>comutils</module>
     </modules>

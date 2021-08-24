@@ -3,12 +3,15 @@ server:
 
 eureka:
   instance:
-    hostname: eureka_server2
+    hostname: eureka-server2.com
+
   client:
-    fetch-registry: false
-    register-with-eureka: false
+    fetch-registry: true
+    register-with-eureka: true
     service-url: #注意这里的defaultZone的写法，写成default-zone是不对的
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://eureka-server.com:8080/eureka/
+  server:
+    peer-node-read-timeout-ms: 6000
 spring:
   devtools:
     restart:

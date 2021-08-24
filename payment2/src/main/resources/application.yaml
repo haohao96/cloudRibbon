@@ -1,5 +1,5 @@
 server:
-  port: 2222
+  port: 2333
 
 eureka:
   client:
@@ -8,11 +8,8 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
   instance:
-    instance-id: payment1
+    instance-id: payment2
     prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 1
-    lease-expiration-duration-in-seconds: 2
-
 spring:
   application:
     name: paymentService

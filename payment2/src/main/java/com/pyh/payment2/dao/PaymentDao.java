@@ -1,7 +1,7 @@
-package com.pyh.payment.dao;
+package com.pyh.payment2.dao;
 
 import com.pyh.comutils.pojo.Payment;
-import com.pyh.payment.mapper.PayMapper;
+import com.pyh.payment2.mapper.PayMapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

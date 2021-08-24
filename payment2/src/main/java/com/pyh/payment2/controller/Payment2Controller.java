@@ -1,16 +1,16 @@
-package com.pyh.payment.controller;
+package com.pyh.payment2.controller;
 
 import com.pyh.comutils.json.ComResult;
 import com.pyh.comutils.pojo.Payment;
-import com.pyh.payment.dao.PaymentDao;
-import com.pyh.payment.mapper.PayMapper;
+import com.pyh.payment2.dao.PaymentDao;
+import com.pyh.payment2.mapper.PayMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 @RestController
-public class PaymentController {
+public class Payment2Controller {
 
     @Value("${server.port}")
     private int serverPort;
