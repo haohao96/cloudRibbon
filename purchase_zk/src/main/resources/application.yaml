@@ -1,0 +1,9 @@
+server:
+  port: 2002
+
+spring:
+  application:
+    name: zookeeperePurchase
+  cloud:
+    zookeeper:
+      connect-string: 2.56.241.27:2181

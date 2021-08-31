@@ -1,0 +1,12 @@
+server:
+  port: 1003
+
+spring:
+  application:
+    name: zookeeperPayment
+  cloud:
+    zookeeper:
+      connect-string: 2.56.241.27:2181
+
+
+
