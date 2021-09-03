@@ -9,7 +9,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url: #注意这里的defaultZone的写法，写成default-zone是不对的
-      defaultZone: http://eureka-server.com:8080/eureka/
+      defaultZone: http://eureka-server.com:8081/eureka/
   server:
     peer-node-read-timeout-ms: 6000
 spring:

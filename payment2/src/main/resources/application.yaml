@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server.com:8080/eureka/,http://eureka-server2.com:8081/eureka/
+      defaultZone: http://eureka-server.com:8081/eureka/,http://eureka-server2.com:8082/eureka/
     fetch-registry: true
     register-with-eureka: true
   instance:

@@ -1,12 +1,15 @@
+
 server:
-  port: 2001
+  port: 2004
 spring:
   application:
-    name: purchaseService
+    name: purchaseRibbon
   devtools:
     restart:
       enabled: true
-
+PAYMENTSERVICE:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 eureka:
   client:
     service-url:
