@@ -1,0 +1,15 @@
+server:
+  port: 2005
+spring:
+  application:
+    name: purchaseOpenFeignService
+  devtools:
+    restart:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server.com:8081/eureka/,http://eureka-server2.com:8082/eureka/
+    fetch-registry: true
+    register-with-eureka: true

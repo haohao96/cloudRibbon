@@ -25,6 +25,7 @@
         <module>payment_zk</module>
         <module>purchase_zk</module>
         <module>purchase_ribbon</module>
+        <module>purchase_openfeign</module>
     </modules>
     <description>Demo SpringCloud project for Spring Boot</description>
     <properties>
