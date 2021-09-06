@@ -20,12 +20,14 @@
         <module>eureka_server2</module>
         <module>payment</module>
         <module>payment2</module>
+        <module>payment_hystrix</module>
         <module>purchase</module>
         <module>comutils</module>
         <module>payment_zk</module>
         <module>purchase_zk</module>
         <module>purchase_ribbon</module>
         <module>purchase_openfeign</module>
+        <module>purchase_hystrix</module>
     </modules>
     <description>Demo SpringCloud project for Spring Boot</description>
     <properties>

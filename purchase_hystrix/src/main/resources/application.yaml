@@ -1,8 +1,8 @@
 server:
-  port: 2005
+  port: 2006
 spring:
   application:
-    name: purchaseOpenFeignService
+    name: purchaseHystrixService
   devtools:
     restart:
       enabled: true
@@ -14,7 +14,6 @@ eureka:
       defaultZone: http://eureka-server.com:8081/eureka/,http://eureka-server2.com:8082/eureka/
     fetch-registry: true
     register-with-eureka: true
-
 ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000
@@ -22,3 +21,6 @@ ribbon:
 logging:
   level:
     com.pyh.purchase_openfeign.service.OpenFeignService: info
+feign:
+  hystrix:
+    enabled: true

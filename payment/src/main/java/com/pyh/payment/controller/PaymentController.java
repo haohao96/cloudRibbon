@@ -37,7 +37,23 @@ public class PaymentController {
     }
 
     @GetMapping("/niubi")
-    public void rest()
-    {}
+    public String test()
+    {
+//        int a=8/0;
+        return "我是提供方1的test方法";
+    }
 
+    //测试fallback的解耦写法
+    @GetMapping("/jieou")
+    public String jieou()
+    {
+//        int a=6/0;
+        return "我是提供方1的jieou方法 ";
+    }
+
+    @GetMapping("/timeout")
+    public int timeOutTest() throws InterruptedException {
+        Thread.sleep(3000);
+        return serverPort;
+    }
 }

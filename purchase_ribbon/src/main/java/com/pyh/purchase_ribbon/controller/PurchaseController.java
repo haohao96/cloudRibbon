@@ -34,4 +34,6 @@ public class PurchaseController {
         return restTemplate.getForObject(PAYMENT_URL+"/select/"+id,ComResult.class);
     }
 
+
+
 }

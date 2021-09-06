@@ -26,4 +26,11 @@ public class PurchaseOpenFeignCont {
     {
         return service.getPaymentById(id);
     }
+
+    @GetMapping("/purchase/timeout")
+
+    public int timeOutTest()
+    {
+        return service.timeOutTest();
+    }
 }
