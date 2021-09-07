@@ -62,4 +62,16 @@ public class PurchaseHystrixCont {
 //        int a=6/0;
         return service.jieou();
     }
+
+    @GetMapping("/purchase/circuitbreaker/{a}")
+    public String circuitbreaker(@PathVariable("a")int a)
+    {
+        return service.circuitbreaker(a);
+    }
+
+    public String circuitbreakerHandler(@PathVariable("a")int a)
+    {
+        return "我是circuitbreakerHandler熔断后的处理方法，消费方hystrix";
+    }
+
 }

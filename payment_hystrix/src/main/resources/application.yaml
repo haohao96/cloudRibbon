@@ -16,15 +16,16 @@ ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000
 
+feign:
+  hystrix:
+    enabled: true
+
 spring:
   application:
     name: paymentService
   devtools:
     restart:
       enabled: true
-
-
-
   datasource:
     druid: #前缀写成这样就好了 spring.datasource.druid这样自动提示可以用，username等属性也可以用，
       #然后在ConfigurationProperties注解中把prefix改为spring.datasource.druid即可。

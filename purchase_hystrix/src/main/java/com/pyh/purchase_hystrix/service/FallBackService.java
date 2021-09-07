@@ -20,6 +20,11 @@ public class FallBackService implements HystrixService {
     }
 
     @Override
+    public String circuitbreaker(int a) {
+        return "我是消费方hystrix，异常了，解耦";
+    }
+
+    @Override
     public String timeOutTest() {
         return null;
     }

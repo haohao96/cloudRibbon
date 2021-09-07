@@ -17,6 +17,9 @@ public interface HystrixService {
     @GetMapping("/select/{id}")
     public ComResult<Payment> getPaymentById(@PathVariable("id")Long id);
 
+    @GetMapping("/circuitbreaker/{a}")
+    public String circuitbreaker(@PathVariable("a")int a);
+
     @GetMapping("/timeout")
     public String timeOutTest();
 

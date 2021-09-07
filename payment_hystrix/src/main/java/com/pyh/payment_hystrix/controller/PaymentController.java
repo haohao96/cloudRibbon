@@ -67,6 +67,31 @@ public class PaymentController {
         return "我是提供方hystrix的jieou方法 ";
     }
 
+    @GetMapping("/circuitbreaker/{a}")
+    @HystrixCommand(fallbackMethod = "circuitbreakerHandler",commandProperties = {
+            //开启熔断器
+            @HystrixProperty(name = "circuitBreaker.enabled",value = "true"),
+            //设置窗口期，即熔断后过多久再次尝试访问此接口，以此看此接口是否恢复正常
+            @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds",value = "10000"),
+//            在窗口期访问这个接口的总次数必须要达到此数值，如果没达到，就算全都访问这个接口失败也不会熔断
+            @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold",value = "6"),
+//            访问这个接口失败的次数占总访问次数的比例超过此数值，则熔断，否则不熔断
+            @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage",value = "50")
+    })
+    public String circuitbreaker(@PathVariable("a")int a)
+    {
+        if (a<8)
+        {
+            throw new RuntimeException("小于8");
+        }
+        return "我是提供方hystrix的circuitbreaker方法 ";
+    }
+
+    public String circuitbreakerHandler(@PathVariable("a")int a)
+    {
+        return "我是circuitbreakerHandler熔断后的处理方法，提供方hystrix";
+    }
+
     @GetMapping("/timeout")
     @HystrixCommand(fallbackMethod = "timeOutHanlder",
             commandProperties = {@HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",

@@ -48,7 +48,8 @@ public class PaymentController {
     public String jieou()
     {
 //        int a=6/0;
-        return "我是提供方1的jieou方法 ";
+
+        return "大于10，我是提供方1的jieou方法 ";
     }
 
     @GetMapping("/timeout")
