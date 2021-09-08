@@ -1,0 +1,44 @@
+server:
+  port: 9001
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server.com:8081/eureka/,http://eureka-server2.com:8082/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    instance-id: gateway
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+spring:
+  application:
+    name: gatewayService
+  devtools:
+    restart:
+      enabled: true
+
+#gateway≈‰÷√
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: route1
+#          uri: http://localhost:1001
+          uri: lb://PAYMENTSERVICE
+          predicates:
+            - Path=/select/**
+            - After=2021-09-08T16:46:43.220517500+08:00[Asia/Shanghai]
+
+        - id: route2
+#          uri: http://localhost:1001
+          uri: lb://PAYMENTSERVICE
+          predicates:
+            - Path=/select/**
+            - After=2021-09-08T16:46:43.220517500+08:00[Asia/Shanghai]
+
