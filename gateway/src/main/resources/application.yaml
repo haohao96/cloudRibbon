@@ -21,7 +21,7 @@ spring:
     restart:
       enabled: true
 
-#gateway≈‰÷√
+  #gatewayÈÖçÁΩÆ
   cloud:
     gateway:
       discovery:
@@ -29,16 +29,18 @@ spring:
           enabled: true
       routes:
         - id: route1
-#          uri: http://localhost:1001
+          #          uri: http://localhost:1001
           uri: lb://PAYMENTSERVICE
           predicates:
             - Path=/select/**
             - After=2021-09-08T16:46:43.220517500+08:00[Asia/Shanghai]
+        #            - Cookie=username,pyh
 
         - id: route2
-#          uri: http://localhost:1001
+          #          uri: http://localhost:1001
           uri: lb://PAYMENTSERVICE
           predicates:
             - Path=/select/**
             - After=2021-09-08T16:46:43.220517500+08:00[Asia/Shanghai]
+#            - Cookie=username,pyh
 
