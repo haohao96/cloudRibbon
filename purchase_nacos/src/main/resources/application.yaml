@@ -1,0 +1,11 @@
+server:
+  port: 2007
+spring:
+  application:
+    name: purchaseNacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+service-url:
+  nacos-user-service: http://paymentNacos
