@@ -1,0 +1,19 @@
+server:
+  port: 1003
+spring:
+  application:
+    name: nacosConfig
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        group: Test_GROUP
+        namespace: 0d1df045-8425-4680-8526-45bd64d770e7
+  devtools:
+    restart:
+      enabled: true
+
+
